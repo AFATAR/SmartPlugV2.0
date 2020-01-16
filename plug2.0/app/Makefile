@@ -12,8 +12,8 @@
 #     a generated lib/image xxx.a ()
 #
 TARGET = eagle
-#FLAVOR = release
-FLAVOR = debug
+FLAVOR = release
+#FLAVOR = debug
 
 #EXTRA_CCFLAGS += -u
 
@@ -28,10 +28,20 @@ ifndef PDIR # {
 GEN_IMAGES= eagle.app.v6.out
 GEN_BINS= eagle.app.v6.bin
 SPECIAL_MKTARGETS=$(APP_MKTARGETS)
-SUBDIRS=    \
-    user    \
-    driver
-       
+SUBDIRS=   \
+aliyun     \
+bigiot	   \
+common     \
+config     \
+device     \
+driver     \
+esp8266    \
+httpserver \
+log        \
+main       \
+meter      \
+socket     \
+websocket
 
 endif # } PDIR
 
@@ -54,8 +64,19 @@ ifeq ($(FLAVOR),release)
 endif
 
 COMPONENTS_eagle.app.v6 = \
-    user/libuser.a \
-    driver/libdriver.a
+aliyun/aliyun.a     \
+bigiot/bigiot.a	   \
+common/common.a     \
+config/config.a     \
+device/device.a     \
+driver/driver.a     \
+esp8266/esp8266.a        \
+httpserver/httpserver.a \
+log/log.a        \
+main/main.a        \
+meter/meter.a       \
+socket/socket.a      \
+websocket/websocket.a 
 
 LINKFLAGS_eagle.app.v6 = \
     -L$(SDK_PATH)/lib        \

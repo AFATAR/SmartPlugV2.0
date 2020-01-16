@@ -12,7 +12,7 @@
 #     a generated lib/image xxx.a ()
 #
 ifndef PDIR
-GEN_LIBS = driver.a
+GEN_LIBS = meter.a
 endif
 
 
@@ -38,6 +38,7 @@ endif
 #
 
 INCLUDES := $(INCLUDES) -I $(PDIR)include
+INCLUDES += -I ./
 PDIR := ../$(PDIR)
 sinclude $(PDIR)Makefile
 

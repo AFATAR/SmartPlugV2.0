@@ -12,7 +12,7 @@
 #     a generated lib/image xxx.a ()
 #
 ifndef PDIR
-GEN_LIBS = driver.a
+GEN_LIBS = websocket.a
 endif
 
 

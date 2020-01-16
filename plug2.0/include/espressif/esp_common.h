@@ -116,9 +116,6 @@
 
 #include "smartconfig.h"
 #include "spi_flash.h"
-#include "uart.h"
-#include "gpio.h"
 #include "upgrade.h"
-
 
 #endif

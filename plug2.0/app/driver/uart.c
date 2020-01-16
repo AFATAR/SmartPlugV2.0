@@ -29,7 +29,7 @@
 #include "freertos/queue.h"
 
 #include "uart.h"
-#include "user_common.h"
+#include "../common/common.h"
 #include "esp_common.h"
 
 enum {
